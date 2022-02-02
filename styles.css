@@ -1,0 +1,64 @@
+body {
+    display: grid;
+    grid-template-areas: "nav documentation";
+    grid-template-columns: 300px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    grid-area: nav;
+    position: fixed;
+    overflow-y: scroll;
+    max-height: 100vh;
+    
+}
+
+nav header {
+    font-size: 2rem;
+    padding: 15px;
+}
+
+nav a {
+    display: block;
+    border-top: 1px solid black;
+    font-size: 1.3rem;
+    padding: 10px;
+    text-decoration: none;
+}
+
+a:link {
+    color: gray;
+}
+
+a:visited {
+    color: gray;
+}
+
+nav a:last-of-type {
+    padding-bottom: 50px;
+}
+
+
+
+main {
+    grid-area: documentation;
+    padding-left: 40px;
+}
+
+main header {
+    font-size: 2rem;
+}
+
+@media (max-width: 700px) {
+    nav {
+        display: none;
+    }
+    body {
+        display: block;
+        padding: 5px;
+    }
+    main {
+        padding-left: 0%;
+    }
+}
+
